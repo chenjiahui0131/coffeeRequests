@@ -1,0 +1,5 @@
+.DS_Store
+*.egg-info/
+dist/
+publish.sh
+__pycache__
