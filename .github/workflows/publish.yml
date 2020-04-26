@@ -1,9 +1,8 @@
 name: Publish
 
 on:
-  create:
-    tag:
-      v*
+  release:
+    types: [created]
 
 jobs:
   deploy:
