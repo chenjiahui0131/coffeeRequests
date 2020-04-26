@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-from .pool import Pool
+import os
 from fake_useragent import UserAgent
+
+from .pool import Pool
 
 
 class UserAgentPool(Pool):
 
     def __init__(self):
-        self.ua = UserAgent()
+        json_path = os.path.dirname(os.path.abspath(__file__))
+        self.ua = UserAgent(path=f'{json_path}/UA.json')
 
     def pick(self):
         return {'User-Agent': self.ua.random}
