@@ -28,6 +28,9 @@ setup(
     description=("Tools for Economic Applications"),
     license="MIT Licence",
     packages=find_packages(include=(f"{name}*", )),
+    package_data = {
+        f"{name}": ["UA.json"]
+    },
     install_requires=[
     ],
     include_package_data=False,
